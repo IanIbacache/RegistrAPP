@@ -1,20 +1,21 @@
 <app-header></app-header>
 
 <ion-content class="ion-padding" fullscreen>
-  <div class="home-container">
+  <div class="home-container" [ngClass]="{'iniciado': username!==''}">
     <ion-card>
       <ion-card-header>
-        <ion-card-title>¡Bienvenido!</ion-card-title>
+        <ion-card-title>¡Bienvenido!  @if (username!==''){
+        }</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p>Usuario: </p>
-        <!-- Botón agregado -->
+        <p style="color: white;">Usuario: {{username}}
+        </p>
         <ion-button expand="full" color="primary">
           Registrar Asistencia
         </ion-button>
+        <p><a [routerLink]="['/main/restcont']" style="color: white;">Reestablecer Contraseña</a></p>
       </ion-card-content>
     </ion-card>
   </div>
 </ion-content>
-
 <app-footer></app-footer>
