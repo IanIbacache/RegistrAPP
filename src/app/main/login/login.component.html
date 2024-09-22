@@ -1,0 +1,29 @@
+<app-header></app-header>
+<ion-content class="ion-padding" fullscreen>
+  <div class="login-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Bienvenido</ion-card-title>
+        <ion-card-subtitle>Por favor, inicia sesión</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="floating">Nombre de Usuario</ion-label>
+          <ion-input [(ngModel)]="username"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input [(ngModel)]="password"></ion-input>
+        </ion-item>
+
+        <ion-button (click)="login(username, password)">Iniciar sesión</ion-button>
+        <p><a [routerLink]="['/main/restcont']" style="color: white;">Reestablecer Contraseña</a></p>
+        <ion-text color="danger" *ngIf="loginFailed">
+          Usuario o clave incorrectos.
+        </ion-text>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>s
+<app-footer></app-footer>
