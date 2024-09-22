@@ -18,11 +18,14 @@
         </ion-item>
 
         <ion-button (click)="login(username, password)">Iniciar sesión</ion-button>
+        <p><a [routerLink]="['/main/restcont']" style="color: white;">Reestablecer Contraseña</a></p>
         <ion-text color="danger" *ngIf="loginFailed">
           Usuario o clave incorrectos.
         </ion-text>
+        <!-- Se cambio el restaurar contraseña se cambio de alumno a login -->
+
       </ion-card-content>
     </ion-card>
   </div>
-</ion-content>s
+</ion-content>
 <app-footer></app-footer>
