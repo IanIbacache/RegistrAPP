@@ -37,4 +37,14 @@ export class AuthService {
       }, 4000);
     });
   }
+
+  logout(): void{
+    this.usernameSubject.next('');
+    this.isAuthenticatedSubject.next(false);
+    this.loginFailedSubject.next(false);
+  }
+
+  isLoggedIn(){
+    return this.isAuthenticated$;
+  }
 }

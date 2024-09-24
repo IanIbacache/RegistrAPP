@@ -9,13 +9,13 @@ export const userSimulated: User[]=[
   },
   {
     username: 'IanIbacache',
-    password: 'Ianpro123',
+    password: 'Ian123',
     typeUser: 2,
     fullName: "Ian Ibacache"
   },
   {
     username: 'BrianMartel',
-    password: 'Brianpro123',
+    password: 'Brian123',
     typeUser: 3,
     fullName: "Brian Martel"
   },

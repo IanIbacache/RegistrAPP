@@ -14,11 +14,11 @@
 
         <ion-item>
           <ion-label position="floating">Contraseña</ion-label>
-          <ion-input [(ngModel)]="password"></ion-input>
+          <ion-input [(ngModel)]="password" type="password"></ion-input>
         </ion-item>
 
         <ion-button (click)="login(username, password)">Iniciar sesión</ion-button>
-        <p><a [routerLink]="['/main/restcont']" style="color: white;">Reestablecer Contraseña</a></p>
+        <p><a [routerLink]="['/restcont']" style="color: white;">Reestablecer Contraseña</a></p>
         <ion-text color="danger" *ngIf="loginFailed">
           Usuario o clave incorrectos.
         </ion-text>

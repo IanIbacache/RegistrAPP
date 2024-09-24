@@ -38,7 +38,7 @@ export class LoginComponent  implements OnInit {
     if (user && (user.typeUser === 2)) {
       this.username = '';
       this.password = '';
-      this.router.navigate(['main/alumno']);
+      this.router.navigate(['/alumno']);
 
     } else if(user && (user.typeUser === 1)){
 
@@ -52,7 +52,7 @@ export class LoginComponent  implements OnInit {
       this.loginFailedSubject.next(true);
       this.username = '';
       this.password = '';
-      this.router.navigate(['main/profesor']);
+      this.router.navigate(['/profesor']);
     } else {
       this.loginFailed = true;
     }

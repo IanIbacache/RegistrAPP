@@ -6,14 +6,16 @@ import { RestContComponent } from './rest-cont/rest-cont.component';
 import { AlumnoComponent } from './alumno/alumno.component';
 import { ProfesorComponent } from './profesor/profesor.component';
 import { ListaclasesComponent } from './listaclases/listaclases.component';
+import { ListaclasesaluComponent } from './listaclasesalu/listaclasesalu.component';
 
 const routes: Routes = [
-  { path: 'main/home', component: HomeComponent },
-  { path: '', component: LoginComponent },
-  { path: 'main/restcont', component: RestContComponent },
-  {path:'main/alumno',component: AlumnoComponent},
-    {path:'main/profesor',component: ProfesorComponent},
-    {path:'main/listaclases',component: ListaclasesComponent},
+  {path:'home', component: HomeComponent },
+  {path:'', component: LoginComponent },
+  {path:'restcont', component: RestContComponent },
+  {path:'alumno',component: AlumnoComponent},
+  {path:'profesor',component: ProfesorComponent},
+  {path:'listaclases',component: ListaclasesComponent},
+  {path:'listaclasesalu', component: ListaclasesaluComponent}
 ];
 
 @NgModule({

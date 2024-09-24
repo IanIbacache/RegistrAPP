@@ -12,10 +12,11 @@ import { AlumnoComponent } from './alumno/alumno.component';
 import { ProfesorComponent } from './profesor/profesor.component';
 import { ListaclasesComponent } from './listaclases/listaclases.component';
 import { RouterLink } from '@angular/router';
+import { ListaclasesaluComponent } from './listaclasesalu/listaclasesalu.component';
 
 
 @NgModule({
-  declarations: [HomeComponent,LoginComponent,RestContComponent,AlumnoComponent,ProfesorComponent,ListaclasesComponent],
+  declarations: [HomeComponent,LoginComponent,RestContComponent,AlumnoComponent,ProfesorComponent,ListaclasesComponent, ListaclasesaluComponent],
   imports: [
     CommonModule,
     MainRoutingModule, SharedModule,IonicModule, FormsModule,RouterLink
