@@ -1,5 +1,4 @@
 <app-header></app-header>
-
 <ion-content class="ion-padding" fullscreen>
   <div class="home-container">
     <ion-card>
@@ -8,36 +7,31 @@
       </ion-card-header>
       <ion-card-content>
         <ion-list>
-          <ion-item lines="none" style="border-radius: 8px; margin-bottom: 10px; padding: 10px; background-color: #f9f9f9;">
+          <ion-item lines="none" >
             <ion-label>
-              <h2 style="color: #4CAF50;">MAT101</h2>
-              <p style="color: white;">Sala: 230</p>
-              <p style="color: white;">Hora: 10:00 AM</p>
+              <h3 style="color: white;">PROGRAMACION DE APLICACIONES MOVILES</h3>
+              <p >Seccion: PGY4121-002D </p>
+              <p >Sala: MP-PC230-LAB</p>
+              <p >Hora: 13:01 a 14:20</p>
             </ion-label>
-            <ion-button slot="end" color="primary">Generar codigo QR</ion-button>
-          </ion-item>
-
-          <ion-item lines="none" style="border-radius: 8px; margin-bottom: 10px; padding: 10px; background-color: #f9f9f9;">
-            <ion-label>
-              <h2 style="color: #4CAF50;">BIO202</h2>
-              <p style="color: white;">Sala: 230</p>
-              <p style="color: white;">Hora: 11:30 AM</p>
-            </ion-label>
-            <ion-button slot="end" color="primary">Generar codigo QR</ion-button>
-          </ion-item>
-
-          <ion-item lines="none" style="border-radius: 8px; margin-bottom: 10px; padding: 10px; background-color: #f9f9f9;">
-            <ion-label>
-              <h2 style="color: #4CAF50;">HIS303</h2>
-              <p style="color: white;">Sala: 230</p>
-              <p style="color: white;">Hora: 1:00 PM</p>
-            </ion-label>
-            <ion-button slot="end" color="primary">Generar codigo QR</ion-button>
+            <ion-button id="modal-trigger">Generar codigo QR</ion-button>
+            <ion-modal trigger="modal-trigger" #modal>
+              <ng-template>
+                <ion-header>
+                  <ion-toolbar>
+                    <ion-title style="color: #572364;">CODIGO QR</ion-title>
+                    <ion-buttons slot="end">
+                      <ion-button (click)="closeModal()">Close</ion-button>
+                    </ion-buttons>
+                  </ion-toolbar>
+                </ion-header>
+                <ion-content class="ion-padding"> <img src="assets/imgs/qr.png" alt="qr" style="width: 100%; height: auto;"></ion-content>
+              </ng-template>
+            </ion-modal>
           </ion-item>
         </ion-list>
       </ion-card-content>
     </ion-card>
   </div>
 </ion-content>
-
 <app-footer></app-footer>
